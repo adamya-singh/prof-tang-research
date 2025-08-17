@@ -1,0 +1,11 @@
+{
+  "recall_at_1": 0.014666666666666666,
+  "recall_at_5": 0.036,
+  "recall_at_10": 0.03833333333333333,
+  "mean_best_rank": 1215.4676666666667,
+  "median_best_rank": 1039.5,
+  "num_images": 3000,
+  "num_captions": 6000,
+  "split": "all",
+  "model": "openai/clip-vit-base-patch32"
+}
