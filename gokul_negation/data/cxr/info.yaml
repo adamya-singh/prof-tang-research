@@ -1,0 +1,66 @@
+id: cxr
+name: Chest X-ray Multi-disease
+summary: "Chest X-ray dataset containing 112,120 frontal-view X-ray
+images with annotations for 14 common thorax diseases"
+
+domain: Chest X-ray
+
+tasks:
+  - task_name: "disease labels"
+    task_target: MULTILABEL_CLASSIFICATION
+    labels:
+      0: Atelectasis
+      1: Cardiomegaly
+      2: Effusion
+      3: Infiltration
+      4: Mass
+      5: Nodule
+      6: Pneumonia
+      7: Pneumothorax
+      8: Consolidation
+      9: Edema
+      10: Emphysema
+      11: Fibrosis
+      12: Pleural_Thickening
+      13: Hernia
+  - task_name: "patient sex"
+    task_target: BINARY_CLASSIFICATION
+    labels:
+      0: F
+      1: M
+
+input_size: [1,224,224]
+
+total_num_samples: 112_120
+splits_num_samples:
+  train: 73_421
+  val: 13_103
+  test: 25_596
+original_splits_num_samples:
+  train: 86_524
+  val: 0
+  test: 25_596
+
+domain_overlaps: [pneumonia]
+subject_overlaps: []
+
+license: "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
+project_website: https://www.woerner.eu/projects/medimeta/
+download_url: https://zenodo.org/records/7884735
+DOI: 10.5281/zenodo.7884735
+
+original_data:
+    - name: ChestX-ray14
+      title: "ChestX-ray8"
+      url: https://nihcc.app.box.com/v/ChestXray-NIHCC
+      license: "The usage of the data set is unrestricted. But
+      you should provide the link to our original download site,
+      acknowledge the NIH Clinical Center and provide a citation to our
+      CVPR 2017 paper."
+      authors: "Xiaosong Wang, Yifan Peng, Le Lu, Zhiyong Lu, Mohammadhadi Bagheri, Ronald M. Summers"
+      paper_title: "ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases"
+      paper_url: https://openaccess.thecvf.com/content_cvpr_2017/papers/Wang_ChestX-ray8_Hospital-Scale_Chest_CVPR_2017_paper.pdf
+      citations:
+          - "X. Wang, Y. Peng, L. Lu, Z. Lu, M. Bagheri and R. M. Summers,
+          ChestX-Ray8: Hospital-Scale Chest X-Ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases
+          Conference on Computer Vision and Pattern Recognition (CVPR) 2017"
